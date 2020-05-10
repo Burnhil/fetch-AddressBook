@@ -27,7 +27,8 @@ const displayPost = () => {
   const allPosts = document.getElementById('all-posts')
   arrayOfUsers.map((post, index) => {
     const li = document.createElement('li')
-    const text = document.createTextNode(`#${index}, Name: ${name}:  ${post.body}, by user: ${post.userId}`)
+    //?????????trying to pull the individual elements from the json object in array
+    const text = document.createTextNode(`#${index}, Name: ${post.name.first}:  ${post.body}, by user: ${post.userId}`)
     li.appendChild(text)
     allPosts.append(li)
   })
